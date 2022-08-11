@@ -1,0 +1,208 @@
+*{
+  box-sizing: border-box;
+}
+*:focus{
+  outline: 1px dotted #1E90FF;
+  outline-offset: 2px;
+}
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Bebas Neue','Roboto Condensed','Arial', sans-serif;
+  font-style: 18px;
+  line-height: 1.2;
+  font-weight: 400;
+}
+.site-main{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.block{
+  flex-grow: 1;
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  width: 100%;
+  background-image: url(../img/main.jpg);
+  background-size: cover;
+  background-position: center bottom;
+}
+.hero-heading{
+  margin-top: 0;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  font-size: 24px;
+  letter-spacing: 2px;
+  line-height: normal;
+  color: #fff;
+  max-width: 285px;
+}
+.hero-link{
+  display: inline-block;
+  letter-spacing: 2px;
+  color:#fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #1E90FF;
+  transition: opacity 0.4s ease;
+}
+.hero-link:hover{
+  opacity: 0.8;
+}
+.hero-link:active{
+  opacity: 0.6;
+}
+
+.hero-link-icon{
+  display: flex;
+  padding: 12px 24px;
+}
+.hero-link-icon::before{
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+  background-image: url(../img/icon-star.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  content:"";
+}
+
+/* Latest-videos */
+.latest-videos {
+  width: 100%;
+  max-width: 600px;
+  padding: 54px;
+  background-color:#fff;
+}
+.latest-videos-heading {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 24px;
+  line-height: normal;
+  letter-spacing: 2px;
+  color: #222;
+}
+.latest-videos-devider {
+  border:0;
+  height: 1px;
+  background-color: #999;
+  /* margin-top: 24px; */
+  margin-bottom: 24px;
+}
+.latest-videos-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 24px;
+}
+.latest-videos-item:not(:last-child){
+  margin-bottom: 10px;
+}
+.item-latest-videos {
+  display: flex;
+  align-items: center;
+}
+.item-latest-videos-img{
+  width: 160px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.item-latest-videos-info{
+  padding: 16px;
+}
+.item-latest-videos-heading {
+  margin: 0;
+  max-width: 307px;
+  font-style: 18px;
+  line-height: normal;
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+}
+.item-latest-videos-link {
+  text-decoration: none;
+  color:#222;
+  transition: color 0.4s ease,
+  opacity 0.4s ease;
+}
+.item-latest-videos-link:hover{
+  color:#1E90FF;
+}
+.item-latest-videos-link:active{
+  opacity: 0.6;
+}
+.item-latest-videos-meta {
+  display: flex;
+  font-family:"Roboto-Condensed", sans-serif;
+  color:#888;
+}
+.item-latest-videos-published-at {
+  display: flex;
+  align-items: center;
+  margin-right: 24px;
+}
+.item-latest-videos-published-at::before{
+  width: 14px;
+  height: 14px;
+  background-image:url(../img/icon-clock.svg);
+  background-size:contain;
+  background-repeat:no-repeat;
+  background-position:center;
+  margin-right: 5px;
+  content:"";
+}
+.item-latest-videos-views {
+  display: flex;
+  align-items: center;
+}
+.item-latest-videos-views::before{
+  width: 16px;
+  height: 16px;
+  background-image: url(../img/icon-eyes.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin-right: 5px;
+  content:"";
+}
+.latest-videos-btn{
+  font-family: "Roboto Condensed";
+  padding: 12px 0;
+  background-color:#1E90FF;
+  color: #fff;
+  border: none;
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: normal;
+  cursor: pointer;
+}
+
+
+
+
+
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+  .block-left{
+    background-image: url(../img/main.jpg);
+  }
+}
