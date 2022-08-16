@@ -1,8 +1,13 @@
+:root{
+  --accent-color:#1E90FF;
+}
+
+
 *{
   box-sizing: border-box;
 }
 *:focus{
-  outline: 1px dotted #1E90FF;
+  outline: 1px dotted var(--accent-color);
   outline-offset: 2px;
 }
 body{
@@ -28,14 +33,19 @@ body{
 }
 
 .hero{
-  display: flex;
-  justify-content: center;
-  align-items: center;
   max-width: 600px;
   width: 100%;
   background-image: url(../img/main.jpg);
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
+}
+.hero-content{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .hero-heading{
   margin-top: 0;
@@ -53,7 +63,7 @@ body{
   color:#fff;
   text-decoration: none;
   text-transform: uppercase;
-  background-color: #1E90FF;
+  background-color: var(--accent-color);
   transition: opacity 0.4s ease;
 }
 .hero-link:hover{
@@ -73,7 +83,7 @@ body{
   margin-right: 12px;
   background-image: url(../img/icon-star.svg);
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
   background-size: contain;
   content:"";
 }
@@ -137,7 +147,7 @@ body{
   opacity 0.4s ease;
 }
 .item-latest-videos-link:hover{
-  color:#1E90FF;
+  color:var(--accent-color);
 }
 .item-latest-videos-link:active{
   opacity: 0.6;
@@ -145,9 +155,9 @@ body{
 .item-latest-videos-meta {
   display: flex;
   font-family:"Roboto-Condensed", sans-serif;
-  color:#888;
 }
 .item-latest-videos-published-at {
+  color:#888;
   display: flex;
   align-items: center;
   margin-right: 24px;
@@ -163,6 +173,7 @@ body{
   content:"";
 }
 .item-latest-videos-views {
+  color:#666;
   display: flex;
   align-items: center;
 }
@@ -179,7 +190,7 @@ body{
 .latest-videos-btn{
   font-family: "Roboto Condensed";
   padding: 12px 0;
-  background-color:#1E90FF;
+  background-color:var(--accent-color);
   color: #fff;
   border: none;
   display: block;
